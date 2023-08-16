@@ -16,7 +16,7 @@ const Formulario = ({
         <input type="text" name="nombre" value={nombre} onChange={onChange} />
         {errores.nombre && <span className="error">{errores.nombre}</span>}
 
-        
+        <div>
           <label>Correo: </label>
           <input
             type="email"
@@ -25,17 +25,22 @@ const Formulario = ({
             onChange={onChange}
           />
           {errores.correo && <span className="error">{errores.correo}</span>}
-        
+        </div>
 
-        <label>Contraseña: </label>
-        <input
-          type="password"
-          name="contraseña"
-          value={contraseña}
-          onChange={onChange}
-        />
-        {errores.contraseña && <span className="error">{errores.contraseña}</span>}
+        <div>
+          <label>Contraseña: </label>
+          <input
+            type="password"
+            name="contraseña"
+            value={contraseña}
+            onChange={onChange}
+          />
+          {errores.contraseña && (
+            <span className="error">{errores.contraseña}</span>
+          )}
+        </div>
       </div>
+
       {/* Resto de los campos y validaciones */}
       <button type="submit">Registrar</button>
     </form>
