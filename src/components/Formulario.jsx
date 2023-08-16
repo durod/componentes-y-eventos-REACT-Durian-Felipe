@@ -6,13 +6,14 @@ const Formulario = ({
   nombre,
   correo,
   contraseña,
+  confirmaContraseña,
   onChange,
   errores,
 }) => {
   return (
     <form onSubmit={onSubmit}>
       <div>
-        
+
         <div>
           <label>Nombre: </label>
           <input
@@ -55,13 +56,13 @@ const Formulario = ({
           <label>Confirma tu contraseña: </label>
           <input
             type="password"
-            name="contraseña"
-            value={contraseña}
-            onChange={onChange}
+            name="confirmaContraseña"
+            value={confirmaContraseña}
+              onChange={onChange}
             placeholder="Confirma tu contraseña"
           />
-          {errores.contraseña && (
-            <span className="error">{errores.contraseña}</span>
+          {errores.confirmaContraseña && (
+            <span className="error">{errores.confirmaContraseña}</span>
           )}
         </div>
       </div>
