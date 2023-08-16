@@ -13,7 +13,7 @@ const Formulario = ({
     <form onSubmit={onSubmit}>
       <div>
         <label>Nombre: </label>
-        <input type="text" name="nombre" value={nombre} onChange={onChange} />
+        <input type="text" name="nombre" value={nombre} onChange={onChange} placeholder="Nombre" />
         {errores.nombre && <span className="error">{errores.nombre}</span>}
 
         <div>
@@ -22,7 +22,7 @@ const Formulario = ({
             type="email"
             name="correo"
             value={correo}
-            onChange={onChange}
+            onChange={onChange} placeholder="tuemail@ejemplo.com"
           />
           {errores.correo && <span className="error">{errores.correo}</span>}
         </div>
@@ -33,12 +33,26 @@ const Formulario = ({
             type="password"
             name="contraseña"
             value={contraseña}
-            onChange={onChange}
+            onChange={onChange} placeholder="Contraseña"
           />
           {errores.contraseña && (
             <span className="error">{errores.contraseña}</span>
           )}
         </div>
+
+        <div>
+          <label>Confirma tu contraseña: </label>
+          <input
+            type="password"
+            name="contraseña"
+            value={contraseña}
+            onChange={onChange} placeholder="Confirma tu contraseña"
+          />
+          {errores.contraseña && (
+            <span className="error">{errores.contraseña}</span>
+          )}
+        </div>
+
       </div>
 
       {/* Resto de los campos y validaciones */}
