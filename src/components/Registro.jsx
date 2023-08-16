@@ -26,6 +26,9 @@ const Registro = () => {
 
     if (!contraseña.trim()) {
       newErrores.contraseña = 'La contraseña es requerida';
+    } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña)) {
+      newErrores.contraseña =
+        'La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula y un número';
     }
 
     setErrores(newErrores);
