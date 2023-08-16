@@ -22,8 +22,9 @@ const Formulario = ({
             type="email"
             name="correo"
             value={correo}
-            onChange={onchange}
+            onChange={onChange}
           />
+          {errores.correo && <span className="error">{errores.correo}</span>}
         
 
         <label>Contraseña: </label>
@@ -31,8 +32,9 @@ const Formulario = ({
           type="password"
           name="contraseña"
           value={contraseña}
-          onChange={onchange}
+          onChange={onChange}
         />
+        {errores.contraseña && <span className="error">{errores.contraseña}</span>}
       </div>
       {/* Resto de los campos y validaciones */}
       <button type="submit">Registrar</button>
