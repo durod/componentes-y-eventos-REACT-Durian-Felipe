@@ -9,6 +9,7 @@ const Registro = () => {
   const [nombre, setNombre] = useState('');
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
+  const [confirmaContraseña, setconfirmaContraseña] = useState('');
   const [errores, setErrores] = useState({});
   const [alerta, setAlerta] = useState(null);
 
@@ -29,6 +30,10 @@ const Registro = () => {
     } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña)) {
       newErrores.contraseña =
         'La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula y un número';
+    }
+
+    if (contraseña !== confirmaContraseña) {
+      newErrores.confirmaContraseña = 'Las contraseñas no coinciden';
     }
 
     setErrores(newErrores);
@@ -66,11 +71,13 @@ const Registro = () => {
         nombre={nombre}
         correo={correo}
         contraseña={contraseña}
+        confirmaContraseña={ confirmaContraseña}
         onChange={(e) => {
           const { name, value } = e.target;
           if (name === 'nombre') setNombre(value);
           if (name === 'correo') setCorreo(value);
           if (name === 'contraseña') setContraseña(value);
+          if (name === 'confirmaContraseña') setconfirmaContraseña(value);
         }}
         errores={errores}
       />
