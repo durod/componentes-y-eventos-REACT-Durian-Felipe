@@ -1,10 +1,79 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import Formulario from './Formulario';
+import SocialButton from './SocialButton';
+import Alert from './Alert';
+import '@fortawesome/fontawesome-free/css/all.css';
 
-export default function Registro() {
+const Registro = () => {
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [contraseña, setContraseña] = useState('');
+  const [errores, setErrores] = useState({});
+  const [alerta, setAlerta] = useState(null);
+
+  const handlerSubmit = (event) => {
+    event.preventDefault();
+    const newErrores = {};
+
+    if (!nombre.trim()) {
+      newErrores.nombre = 'El nombre es requerido';
+    }
+
+    if (!correo.trim()) {
+      newErrores.correo = 'El correo es requerido';
+    }
+
+    if (!contraseña.trim()) {
+      newErrores.contraseña = 'La contraseña es requerida';
+    }
+
+    setErrores(newErrores);
+
+    /*if (Object.keys(newErrores).length === 0) {
+      setAlerta({ type: 'success', message: 'Formulario enviado' });
+      
+    }*/
+  };
+
   return (
-    <div>
-        <h2>Crea una cuenta</h2>
-
+    <div className="registro-container">
+      <h1>Crea una cuenta</h1>
+      {alerta && <Alert type={alerta.type} message={alerta.message} />}
+      <div className="social-buttons-container">
+        <SocialButton
+          provider="Google"
+          icon={<i className="fab fa-google"></i>} // agregar icono
+          onClick={() => alert('Iniciar sesión con Google')}
+        />
+        <SocialButton
+          provider="Facebook"
+          icon={<i className="fab fa-facebook"></i>}// agregar icono
+          onClick={() => alert('Iniciar sesión con Facebook')}
+        />
+        <SocialButton
+          provider="LinkedIn"
+          icon={<i className="fab fa-linkedin"></i>} // agregar icono
+          onClick={() => alert('Iniciar sesión con LinkedIn')}
+        />
+        <h3>O usa tu email para registrarte</h3>
+      </div>
+      <Formulario
+        onSubmit={handlerSubmit}
+        nombre={nombre}
+        correo={correo}
+        contraseña={contraseña}
+        onChange={(e) => {
+          const { name, value } = e.target;
+          if (name === 'nombre') setNombre(value);
+          if (name === 'correo') setCorreo(value);
+          if (name === 'contraseña') setContraseña(value);
+        }}
+        errores={errores}
+      />
+      
     </div>
-  )
-}
+  );
+};
+
+export default Registro;
