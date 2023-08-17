@@ -58,6 +58,8 @@ const Registro = () => {
           icon={<i className="fab fa-facebook"></i>}// agregar icono
           onClick={() => alert('Iniciar sesión con Facebook')}
         />
+
+
         <SocialButton
           provider="Github"
           icon={<i className="fab fa-github"></i>} // agregar icono
