@@ -12,7 +12,7 @@ const Formulario = ({
 }) => {
   return (
     <form onSubmit={onSubmit}>
-      <div>
+      <div className="formulario-container">
 
         <div>
           <label>Nombre: </label>
@@ -68,7 +68,7 @@ const Formulario = ({
       </div>
 
       {/* Resto de los campos y validaciones */}
-      <button type="submit">Registrar</button>
+      <button type="submit">Registrarse</button>
     </form>
   );
 };

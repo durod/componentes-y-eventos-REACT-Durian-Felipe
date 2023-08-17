@@ -33,10 +33,42 @@
   }
 }
 
+.social-buttons-container-icons {
+  display: flex;
+  justify-content: space-evenly;
+  height: 5rem;
+  background-color: aqua;
+  display: flex; 
+  align-items: center;
+}
+
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.registro-container{
+  background-color: white;
+    color: black;
+    height: 32rem;
+    width: 33rem;    
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario-container {
+  display: flex;
+  flex-direction: column;
+  width: 27rem;
+  height: 11rem; 
+  justify-content: center;
+  background-color: aquamarine;
+  text-align: center;
+  gap: 5px;
 }

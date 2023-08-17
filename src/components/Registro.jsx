@@ -48,22 +48,27 @@ const Registro = () => {
     <div className="registro-container">
       <h1>Crea una cuenta</h1>
       {alerta && <Alert type={alerta.type} message={alerta.message} />}
+
       <div className="social-buttons-container">
-        <SocialButton
-          provider="Google"
-          icon={<i className="fab fa-google"></i>} // agregar icono
-          onClick={() => alert('Iniciar sesión con Google')}
-        />
+
+        <div className='social-buttons-container-icons'>
+        
         <SocialButton
           provider="Facebook"
           icon={<i className="fab fa-facebook"></i>}// agregar icono
           onClick={() => alert('Iniciar sesión con Facebook')}
         />
         <SocialButton
+          provider="Github"
+          icon={<i className="fab fa-github"></i>} // agregar icono
+          onClick={() => alert('Iniciar sesión con GitHub')}
+        />
+        <SocialButton
           provider="LinkedIn"
           icon={<i className="fab fa-linkedin"></i>} // agregar icono
           onClick={() => alert('Iniciar sesión con LinkedIn')}
         />
+        </div>
         <h3>O usa tu email para registrarte</h3>
       </div>
       <Formulario
