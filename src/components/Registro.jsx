@@ -38,10 +38,10 @@ const Registro = () => {
 
     setErrores(newErrores);
 
-    /*if (Object.keys(newErrores).length === 0) {
+    if (Object.keys(newErrores).length === 0) {
       setAlerta({ type: 'success', message: 'Formulario enviado' });
       
-    }*/
+    }
   };
 
   return (
