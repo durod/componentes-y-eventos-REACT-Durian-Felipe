@@ -32,14 +32,17 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+.social-buttons-container {
+  background-color: white;
+}
 
 .social-buttons-container-icons {
   display: flex;
   justify-content: space-evenly;
   height: 5rem;
-  background-color: aqua;
   display: flex; 
   align-items: center;
+  
 }
 
 .card {
@@ -47,28 +50,42 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: white;
 }
 
 .registro-container{
   background-color: white;
-    color: black;
-    height: 42rem;
-    width: 33rem;    
-    border-radius: 19px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  color: black;
+  height: 42rem;
+  width: 33rem;    
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px
+
 }
 
 .formulario-container {
   display: flex;
   flex-direction: column;
   width: 27rem;
-  height: 11rem; 
+  height: 14rem; 
   justify-content: center;
-  background-color: aquamarine;
+  background-color: rgb(255, 255, 255);
   text-align: center;
-  gap: 5px;
+  gap: 10px;
+  border-color: black
 }
+
+.estilo-input {
+  background-color: white;
+  width: 20rem;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  
+}
+

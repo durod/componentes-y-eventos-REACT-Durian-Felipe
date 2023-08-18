@@ -55,22 +55,23 @@ const Registro = () => {
         
         <SocialButton
           provider="Facebook"
-          icon={<i className="fab fa-facebook"></i>}// agregar icono
+          icon={<i className="fab fa-facebook"></i>}
           onClick={() => alert('Iniciar sesión con Facebook')}
         />
 
 
         <SocialButton
           provider="Github"
-          icon={<i className="fab fa-github"></i>} // agregar icono
+          icon={<i className="fab fa-github"></i>} 
           onClick={() => alert('Iniciar sesión con GitHub')}
         />
         <SocialButton
           provider="LinkedIn"
-          icon={<i className="fab fa-linkedin"></i>} // agregar icono
+          icon={<i className="fab fa-linkedin"></i>}
           onClick={() => alert('Iniciar sesión con LinkedIn')}
         />
         </div>
+
         <h3>O usa tu email para registrarte</h3>
       </div>
       <Formulario

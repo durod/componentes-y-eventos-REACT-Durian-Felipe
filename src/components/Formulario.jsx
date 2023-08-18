@@ -14,9 +14,9 @@ const Formulario = ({
     <form onSubmit={onSubmit}>
       <div className="formulario-container">
 
-        <div>
-          <label>Nombre: </label>
-          <input
+        <div >
+          
+          <input className="estilo-input"
             type="text"
             name="nombre"
             value={nombre}
@@ -26,9 +26,9 @@ const Formulario = ({
           {errores.nombre && <span className="error">{errores.nombre}</span>}
         </div>
 
-        <div>
-          <label>Correo: </label>
-          <input
+        <div >
+          
+          <input className="estilo-input"
             type="email"
             name="correo"
             value={correo}
@@ -38,9 +38,9 @@ const Formulario = ({
           {errores.correo && <span className="error">{errores.correo}</span>}
         </div>
 
-        <div>
-          <label>Contraseña: </label>
-          <input
+        <div >
+          
+          <input  className="estilo-input"
             type="password"
             name="contraseña"
             value={contraseña}
@@ -52,9 +52,8 @@ const Formulario = ({
           )}
         </div>
 
-        <div>
-          <label>Confirma tu contraseña: </label>
-          <input
+        <div >
+          <input className="estilo-input"
             type="password"
             name="confirmaContraseña"
             value={confirmaContraseña}
@@ -68,7 +67,7 @@ const Formulario = ({
       </div>
 
       {/* Resto de los campos y validaciones */}
-      <button type="submit">Registrarse</button>
+      <button className="button-register"type="submit">Registrarse</button>
     </form>
   );
 };
