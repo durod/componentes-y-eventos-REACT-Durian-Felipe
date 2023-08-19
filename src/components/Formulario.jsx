@@ -49,6 +49,7 @@ const Formulario = ({
           />
           {errores.contraseña && (
             <span className="error">{errores.contraseña}</span>
+            
           )}
         </div>
 

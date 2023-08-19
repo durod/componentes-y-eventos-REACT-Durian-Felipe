@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.container-principal{
+  width: 68rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -26,6 +34,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -53,11 +62,12 @@
   color: white;
 }
 
+
 .registro-container{
   background-color: white;
   color: black;
   height: 42rem;
-  width: 33rem;    
+  width: 42rem;    
   border-radius: 19px;
   display: flex;
   flex-direction: column;
@@ -70,7 +80,7 @@
 .formulario-container {
   display: flex;
   flex-direction: column;
-  width: 27rem;
+  width: 42rem;
   height: 14rem; 
   justify-content: center;
   background-color: rgb(255, 255, 255);

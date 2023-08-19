@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #EEF72F;
 }
 
 h1 {
@@ -63,7 +64,7 @@ button:focus-visible {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
-  background-color: #38ae6b;
+  background-color: #35ac0d;
   padding: 1.2em 10.5em;
   height: 2em;
 }

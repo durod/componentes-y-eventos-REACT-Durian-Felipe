@@ -18,15 +18,15 @@ const Registro = () => {
     const newErrores = {};
 
     if (!nombre.trim()) {
-      newErrores.nombre = 'El nombre es requerido';
+      newErrores.nombre = ' Nombre es requerido';
     }
 
     if (!correo.trim()) {
-      newErrores.correo = 'El correo es requerido';
+      newErrores.correo = ' Correo es requerido';
     }
 
     if (!contraseña.trim()) {
-      newErrores.contraseña = 'La contraseña es requerida';
+      newErrores.contraseña = 'Contraseña requerida';
     } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña)) {
       newErrores.contraseña =
         'La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula y un número';
@@ -39,15 +39,16 @@ const Registro = () => {
     setErrores(newErrores);
 
     if (Object.keys(newErrores).length === 0) {
-      setAlerta({ type: 'success', message: 'Formulario enviado' });
-      
-    }
+      setAlerta({ type: 'success', message: 'Formulario enviado' });      
+    } else {
+      setAlerta({ type: 'error', message: 'Faltan campos por llenar' });
+    
+  };
   };
 
   return (
     <div className="registro-container">
-      <h1>Crea una cuenta</h1>
-      {alerta && <Alert type={alerta.type} message={alerta.message} />}
+      <h1>Crea una cuenta</h1>      
 
       <div className="social-buttons-container">
 
@@ -89,7 +90,20 @@ const Registro = () => {
         }}
         errores={errores}
       />
-      
+      {alerta && (
+        <div
+          className={`alert ${alerta.type}`}
+          style={{
+            padding: '10px',
+            marginTop: '10px',
+            backgroundColor: alerta.type === 'success' ? 'green' : 'red',
+            color: 'white',
+            textAlign: 'center',
+          }}
+        >
+          {alerta.message}
+        </div>
+      )}
     </div>
   );
 };
