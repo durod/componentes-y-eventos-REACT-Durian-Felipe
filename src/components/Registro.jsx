@@ -104,8 +104,10 @@ const Registro = () => {
           }}
         >
           {alerta.message}
+          <br />
         </div>
       )}
+      <br />
     </div>
   );
 };
