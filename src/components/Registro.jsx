@@ -99,6 +99,8 @@ const Registro = () => {
             backgroundColor: alerta.type === 'success' ? 'green' : 'red',
             color: 'white',
             textAlign: 'center',
+            width: '15rem',
+            borderRadius: '20px',
           }}
         >
           {alerta.message}

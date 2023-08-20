@@ -22,7 +22,7 @@ const Formulario = ({
             value={nombre}
             onChange={onChange}
             placeholder="Nombre"
-          />
+          /> <br />
           {errores.nombre && <span className="error">{errores.nombre}</span>}
         </div>
 
@@ -34,7 +34,7 @@ const Formulario = ({
             value={correo}
             onChange={onChange}
             placeholder="tuemail@ejemplo.com"
-          />
+          /><br />
           {errores.correo && <span className="error">{errores.correo}</span>}
         </div>
 
@@ -46,7 +46,7 @@ const Formulario = ({
             value={contraseña}
             onChange={onChange}
             placeholder="Contraseña"
-          />
+          /><br />
           {errores.contraseña && (
             <span className="error">{errores.contraseña}</span>
             
@@ -60,7 +60,7 @@ const Formulario = ({
             value={confirmaContraseña}
               onChange={onChange}
             placeholder="Confirma tu contraseña"
-          />
+          /><br />
           {errores.confirmaContraseña && (
             <span className="error">{errores.confirmaContraseña}</span>
           )}
